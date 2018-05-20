@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="/css/bootstrap.min.css">
+     <!-- Icons -->
+     <link href="//use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Jarvi IA</title>
+    </head>
+    <body>
+    <!-- LEFT NAV AUTH -->
+    <div id="myLeftMenu" class="sideLnav">
+        <button class="btn btn-danger closebtn" type="button" onclick="closeLNav()">
+            <i class="fas fa-times"></i>          
+        </button>
+        <!-- If user its logged -->
+        <%if (user) { %>
+        <h5 id="textowellcom">Wellcome <strong id="cojonambre"><%= user.local.name %></strong><br></h5>
+        <% } %>
+        <%if (user) { %>
+        <a id="sidenavBtns" href="/prof"><p><i class="fas fa-user"></i> Profile</p></a>
+        <a id="sidenavBtns" href="/logout"><p><i class="fas fa-sign-out-alt"></i> Logout</p></a>    
+        <% }%>
+        <div class="container">
+            <div class="row justify-content-md-center" style="padding: 10px;">
+                <!-- If user its not logged -->
+                <%if (!user) { %>
+                <h5>Please Identificate!<strong id="cojonambre"></strong></h5>                    
+                <!-- Login / register error alert -->
+                <% if(message.length > 0) { %>
+                    <div class="alert alert-danger pulse">
+                        <%= message %>
+                    </div>
+                <% } %>
+                <div class="card border-secondary text-center">
+                    <div id="mainLogin" class="card-body text-secondary">
+                        <p class="card-title">Login</p>
+                        <form action="/login" method="POST">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-dark">Login</button>                           
+                        </form>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <!-- LEFT NAV AUTH END -->
+    <!-- RIGHT NAV ACTION -->
+    <div id="myRightMenu" class="sideRnav">
+        <button class="btn btn-danger closebtn" type="button" onclick="closeRNav()">
+            <i class="fas fa-times"></i>          
+        </button>
+        <div class="container">
+            <div class="row justify-content-md-center" style="padding: 10px;">
+                <!-- Actions -->
+                <div id="video"></div>
+                <div id="searchGUI"><iframe id="searchFrame" frameborder="0" src="about:blank"></iframe></div>
+                <div id="dronCamera">
+                    <div class="container">
+                        <div class="demo-frame">
+                            <div class="demo-container">
+                                <div class="container center">
+                                    <canvas id="canvas-fDR" width="300" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- RIGHT NAV ACTION END -->
+    <!-- BOTTOM NAV CONFIG -->
+    <div id="myBottomMenu" class="sideBnav">
+        <button class="btn btn-danger closebtn" type="button" onclick="closeBNav()">
+            <i class="fas fa-times"></i>          
+        </button>
+        <div class="container">
+            <div class="row justify-content-md-center" style="padding: 10px;">
+                <!-- Actions -->
+                <div id="dronCameraP">
+                    <div class="container">
+                        <div class="demo-frame">
+                            <div class="demo-container">
+                                <div class="container center">
+                                    <canvas id="canvas-per" width="300" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <!-- BOTTOM NAV CONFIG END -->

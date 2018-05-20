@@ -1,0 +1,192 @@
+/*BODY AND HTML CONFIG*/
+html, body{
+    height: 100%;
+}
+body{
+  background: url(/imgs/object/wallpp.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+/*RESPONSIVE CONFIG*/
+@media screen and (max-width: 600px) {
+ #navName{
+   display:none;
+ }
+ #rightLoggedNav{
+   text-align: center;
+ }
+}
+/*INDEX CONFIG*/
+#micSdiv{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#terminator{
+  border: 1px solid;
+  overflow-y:hidden;
+}
+
+#jumboCombo{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  /*border: 1px dashed deeppink;*/
+}
+
+#world {
+  width:100%;
+  height: 300px;
+  overflow: hidden;
+  background: transparent;
+  text-align: center;
+}
+
+#video{
+  border-bottom:3px solid orange;
+  border-top:3px solid orange;
+  border-radius:10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: none;
+}
+
+#main{
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+#dronCamera{
+  display: none;
+}
+
+#dronCameraP{
+  display: none;
+}
+
+/*#videoel, #overlay{
+  margin-top: 45px;
+  position: absolute;
+  margin-left: -130px;
+}*/
+
+video {
+  margin-left: -195px;
+  margin-top: 45px;
+  position: absolute;
+}
+
+#canvasC{
+  margin-left: -195px;
+  margin-top: 45px;
+  position: absolute;
+}
+
+#searchGUI{
+  border-bottom:3px solid orange;
+  border-top:3px solid orange;
+  border-radius:10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: none;
+  padding: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 320px;
+}
+
+#searchFrame{
+  width: 440px;
+  height: 600px;
+  border: 0;
+  -ms-transform: scale(0.50);
+  -moz-transform: scale(0.50);
+  -o-transform: scale(0.50);
+  -webkit-transform: scale(0.50);
+  transform: scale(0.50);
+  
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+/*END INDEX CONFIG*/
+
+/* LEFT SIDE NAV CONFIG*/
+.sideLnav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#sidenavBtns {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sideLnav .closebtn {
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  font-size: 10px;
+}
+
+/*LEFT SIDE NAV CONFIG END*/
+
+/* RIGHT SIDE NAV CONFIG*/
+.sideRnav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sideRnav .closebtn {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  font-size: 10px;
+}
+/*Right SIDE NAV CONFIG END*/
+
+/* Bottom SIDE NAV CONFIG*/
+.sideBnav {
+  height: 0; /* 100% Full-height */
+  width: 100%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  bottom: 0; /* Stay at the bottom */
+  background-color: #111; /* Black*/
+  overflow-y: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sideBnav .closebtn {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  font-size: 10px;
+}
+/*Bottom SIDE NAV CONFIG END*/

@@ -1,0 +1,40 @@
+{
+  "name": "iatest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect": "^3.6.6",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "face-recognition": "^0.9.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "jdom": "^2.0.3",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.7.0",
+    "mongoose": "^5.0.12",
+    "morgan": "^1.9.0",
+    "natural": "^0.5.6",
+    "opencv4nodejs": "^4.3.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "say": "^0.14.0",
+    "socket.io": "^2.1.0",
+    "ssl-root-cas": "^1.2.5"
+  }
+}

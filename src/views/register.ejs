@@ -1,0 +1,50 @@
+<% include partials/head %>
+<video autoplay loop muted id="background">
+        <source src="video/home.mp4" type="video/mp4">
+    </video>
+<div class="container" id="terminator">
+    <div class="col-sm-12 col-md-4 mx-auto" id="indexLogin">
+            <% if(message.length > 0) { %>
+                <div class="alert alert-danger pulse">
+                    <%= message %>
+                </div>
+            <% } %>
+        <div class="container">
+            <h1 id="loginT">Register</h1>
+            <div class="input-group mb-3">
+                <form action="/register" method="POST">
+                    <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Email</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                                </div>
+                                <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Email" name="email">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Password</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-key"></i></div>
+                                </div>
+                                <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="password" name="password">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                                <label class="sr-only" for="inlineFormInputGroup">Name</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Name" name="name">
+                                </div>
+                            </div>
+                    <button id="btntop" type="submit" class="btn">Register</button>
+                    <p id="donthaveAc">Have Account?<a href="/login">Login</a> or <a href="/">Home</a></p>                        
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>
