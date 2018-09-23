@@ -84,7 +84,7 @@ MongoClient.connect(url, (err, db) =>{
     cert: fs.readFileSync("./www/keys/domain-crt.pem")
 };*/
 
-//http server new, for https just change http to https and then add optionsHTTPS before app like (optionsHTTPS, app)
+//http server new, for https just change http to https(npm i -s https) and then add optionsHTTPS before app like (optionsHTTPS, app)
 var server = http.createServer(app);
 //server listen on port
 server.listen(app.get('port'), () => {
